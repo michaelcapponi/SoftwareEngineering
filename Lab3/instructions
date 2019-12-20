@@ -1,0 +1,13 @@
+Remember to include in the POM file this dependency
+
+<dependencies>
+        <!-- ActiveMQ -->
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-all</artifactId>
+            <version>5.14.5</version>
+        </dependency>
+</dependencies>
+
+Before starting Server and Client, remember to run "activemq start" oppure
+/home/biar/apache-activemq-5.15.11/bin/activemq start
