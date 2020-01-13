@@ -1,0 +1,6 @@
+https://drive.google.com/open?id=1JYB1W6N_mFPQc5xve5ZfVvdhnTXMuwZ6
+https://www.baeldung.com/maven
+https://www.javacodegeeks.com/2014/12/jaxb-tutorial-xml-binding.html
+https://www.baeldung.com/introduction-to-apache-cxf
+https://www.baeldung.com/apache-cxf-rest-api
+https://www.sqlitetutorial.net/sqlite-java/
