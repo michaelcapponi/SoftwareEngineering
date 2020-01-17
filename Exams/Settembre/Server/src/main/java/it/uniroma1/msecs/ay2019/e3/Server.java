@@ -3,16 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.jmsserver;
+package it.uniroma1.msecs.ay2019.e3;
 
 /**
  *
  * @author biar
  */
 public class Server {
-    public static void main(String[] args){
-        OrderProcessor op = new OrderProcessor();
-        QuotationPublisher qp = new QuotationPublisher();
-        qp.start();
+    public static void main(String args[]) throws Exception {
+        FlightProductor productor = new FlightProductor();
+        productor.start();      
     }
 }

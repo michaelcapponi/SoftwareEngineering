@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.jmsclient;
+package com.mycompany.client;
 
 /**
  *
  * @author biar
  */
 public class Client {
-    public static void main(String[] args){
-        OrderManager om = new OrderManager("Michael");
+    public static void main(String[] args) {
+        new FlightListener().start();
     }
 }
