@@ -64,14 +64,14 @@ public class RestClient {
         
         // Getting al the accounts and then visualizing the accounts
         BankAccount acc_res;
-	for(Integer i : list){
-	    webTarget= client.target(baseUrl+"/"+i);
-	    ib=webTarget.request("text/xml");
-	    acc_res=ib.accept(MediaType.TEXT_XML).get(BankAccount.class);
-	    System.out.println(((BankAccount)acc_res).toString());
-	    for(Operation op: acc_res.getOps()){
-		System.out.println(op.toString());
-	    }
+        for(Integer i : list){
+        webTarget= client.target(baseUrl+"/"+i);
+        ib=webTarget.request("text/xml");
+        acc_res=ib.accept(MediaType.TEXT_XML).get(BankAccount.class);
+        System.out.println(((BankAccount)acc_res).toString());
+        for(Operation op: acc_res.getOps()){
+            System.out.println(op.toString());
+            }
         }
         
         // Deleting an account on RESTServer
