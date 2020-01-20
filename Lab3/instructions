@@ -11,3 +11,6 @@ Remember to include in the POM file this dependency
 
 Before starting Server and Client, remember to run "activemq start" oppure
 /home/biar/apache-activemq-5.15.11/bin/activemq start
+
+https://docs.brew.sh/Homebrew-on-Linux
+https://activemq.apache.org/getting-started
