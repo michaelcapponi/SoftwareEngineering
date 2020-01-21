@@ -29,9 +29,9 @@ public class Consumer {
             ch.queueDeclare(QUEUE_NAME, false, false, false, null);
             System.out.println("[*] Waiting for messages. To exit press CTRL+C");
             DeliverCallback dc = (consumerTag, delivery) -> {
-            String mess = new String(delivery.getBody(), "UTF-8");
-            System.out.println("[x] Received '" + mess + "'");
-        };
+                String mess = new String(delivery.getBody(), "UTF-8");
+                System.out.println("[x] Received '" + mess + "'");
+            };
             ch.basicConsume(QUEUE_NAME, true, dc, consumerTag -> {});
         } catch (Exception ex) {
             Logger.getLogger(Consumer.class.getName()).log(Level.SEVERE, null, ex);

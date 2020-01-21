@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- Added by me -->
+    <meta charset="utf-8">
+    <title>Homework1 - Interactive Graphics</title>
+    <meta name="description" content="Homework1 - Interactive Graphics">
+    <meta name="author" content="Fortunato Tocci">
+  <script id="vertex-shader" type="x-shader/x-vertex">
+
+attribute  vec4 vPosition;
+
+uniform mat4 modelViewMatrix;
+uniform mat4 projectionMatrix;
+
+// For Texture
+attribute  vec2 vTexCoord;
+varying vec2 fTexCoord;
+
+
+void main()
+{
+    // For texture
+    fTexCoord = vTexCoord;
+
+    gl_Position = projectionMatrix * modelViewMatrix * vPosition;
+}
+</script><script id="fragment-shader" type="x-shader/x-fragment">
+
+precision mediump float;
+
+// For texture
+varying  vec2 fTexCoord;
+uniform sampler2D Tex0;
+uniform sampler2D Tex1;
+
+uniform bool flagTextCorso;
+uniform bool flagTextNotCorso;
+uniform bool flagOst;
+
+void main()
+{
+    // For apply color and texture
+    if(flagTextCorso){
+      gl_FragColor = vec4(0.847059, 0.364706, 0.364706, 1.0)*(texture2D(Tex0, fTexCoord)*texture2D(Tex1, fTexCoord));
+    }
+    if(flagTextNotCorso){
+      gl_FragColor = vec4(0.747059, 0.364706, 0.264706, 1.0);
+    }
+    if(flagOst){
+      gl_FragColor = vec4(0.196078, 0.8, 0.196078, 1.0);
+    }
+    if(!flagTextCorso && !flagTextNotCorso && !flagOst){
+      gl_FragColor = vec4(0.35, 0.35, 0.67, 1.0);
+    }
+}
+</script><script type="text/javascript" src="Homework1%20-%20Interactive%20Graphics_files/webgl-utils.js"></script><script type="text/javascript" src="Homework1%20-%20Interactive%20Graphics_files/initShaders.js"></script><script type="text/javascript" src="Homework1%20-%20Interactive%20Graphics_files/MV.js"></script><script type="text/javascript" src="Homework1%20-%20Interactive%20Graphics_files/Homework2.js"></script></head>
+
+
+
+
+
+
+
+
+
+
+
+<body><div>
+torso angle -180 <input id="slider0" type="range" min="-180" max="180" step="10" value="90">
+ 180
+</div><br>
+<div>
+base ostacol angle -60 <input id="slider11" type="range" min="-60" max="60" step="5" value="-20">
+ 60
+</div><br>
+<!--
+<div>
+head2 angle -180 <input id="slider10" type="range"
+ min="-180" max="180" step="10" value="0"
+  />
+ 180
+</div><br/>
+
+<div>
+head1 angle -180 <input id="slider1" type="range"
+ min="-180" max="180" step="10" value="0"
+  />
+ 180
+</div><br/>
+
+<div id="slider2">
+left upper arm angle -180 <input id="slider2" type="range"
+ min="-180" max="180" step="10" value="0"
+  />
+ 180
+</div><br/>
+<div>
+left lower arm angle -180 <input id="slider3" type="range"
+ min="-180" max="180" step="10" value="0"
+  />
+ 180
+</div><br/>
+<div>
+right upper arm angle -180 <input id="slider4" type="range"
+ min="-180" max="180" step="10" value="0"
+  />
+ 180
+</div><br/>
+<div>
+right lower arm angle -180 <input id="slider5" type="range"
+ min="-180" max="180" step="10" value="0"
+  />
+ 180
+</div><br/>
+<div>
+left upper leg angle 0 <input id="slider6" type="range"
+ min="0" max="360" step="10" value="180"
+  />
+ 360
+</div><br/>
+<div>
+left lower leg angle -180 <input id="slider7" type="range"
+ min="-180" max="180" step="10" value="0"
+  />
+ 180
+</div><br/>
+<div>
+right upper leg angle 0 <input id="slider8" type="range"
+ min="0" max="360" step="10" value="180"
+  />
+ 360
+</div><br/>
+
+<div>
+right lower leg angle -180 <input id="slider9" type="range"
+ min="-180" max="180" step="10" value="0"
+  />
+ 180
+</div><br/>
+-->
+<center><button id="togAnimBtn"> Toogle Animation </button></center>
+
+
+
+<canvas id="gl-canvas" width="1024" height="1024">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+
+
+</body></html>

@@ -1,0 +1,16 @@
+Server IP
+=========
+192.168.49.81
+
+
+To include in the POM
+=====================
+
+<dependencies>
+        <!-- ActiveMQ -->
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-all</artifactId>
+            <version>5.14.5</version>
+        </dependency>
+</dependencies>

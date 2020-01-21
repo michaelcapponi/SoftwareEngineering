@@ -1,0 +1,4 @@
+Assicurarsi che rabbitmq si attivo sulla macchina
+sudo rabbitmqctl status
+sudo service rabbitmq-server start
+

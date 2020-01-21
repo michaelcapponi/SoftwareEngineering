@@ -1,0 +1,5 @@
+Andrea: Unica cosa che manca ovviamente é che dovete scaricarvi rabbitmq e activemq su virtualbox per testarli. 
+
+Leo: Comunque per aggiungere il web service conviene fare tasto destro sul project -> new web service client e incollare il link wsdl
+Cosí hai giá tutto le classi e il pom pronto
+senza bisogno di fare drag and drop su shitbeans

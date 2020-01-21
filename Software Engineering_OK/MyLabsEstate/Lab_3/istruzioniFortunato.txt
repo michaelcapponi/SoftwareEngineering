@@ -1,0 +1,2 @@
+Priva avviare il broker di activemq e poi eseguire i programmi con JMS
+/home/biar/apache-activemq-5.15.9/bin/activemq start
